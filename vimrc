@@ -52,15 +52,14 @@ Plug 'ctrlpvim/ctrlp.vim'
 call plug#end()
 
 
-
 " Display and UI Settings
 "tell the term has 256 colors
 set t_Co=256
 
 "use Solarized colourscheme
 set background=dark
-colorscheme solarized
 let g:solarized_termcolors=256
+colorscheme solarized
 let g:AirlineTheme='solarized'
 let g:airline_solarized_bg='dark'
 
@@ -74,8 +73,13 @@ set number
 set cursorline
 "show ruler
 set ruler
-"show indent guides using vim-indent-guides plugin
+"use visual bell instead of beep
+set visualbell
+
+"indent guides using vim-indent-guides plugin
 let g:indent_guides_enable_on_vim_startup = 1
+let g:indent_guides_guide_size = 1
+let g:indent_guides_start_level = 2
 
 "store lots of :cmdline history
 set history=1000
@@ -100,9 +104,6 @@ set hidden
 
 
 " Font Settings
-" Use a font that supports a wider range of UTF-8 characters
-"set guifont=DejaVu\ Sans\ Mono\ 12
-"set guifontwide=DejaVu\ Sans\ Mono\ 12
 set guifont=Ubuntu\ Mono\ 12
 
 
