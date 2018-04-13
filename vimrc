@@ -56,10 +56,9 @@ call plug#end()
 
 
 " Display and UI Settings
-"tell the term has 256 colors
+set background=dark
 set t_Co=256
 "use Atom's OneDark colourscheme
-set background=dark
 let g:onedark_termcolors = 256
 let g:AirlineTheme='onedark'
 colorscheme onedark
