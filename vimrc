@@ -36,8 +36,11 @@ Plug 'scrooloose/nerdtree'
 " NERD tree Git plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'
 
-" Solarized colourscheme
-Plug 'altercation/vim-colors-solarized'
+" Atom One Dark colourscheme
+Plug 'joshdick/onedark.vim'
+
+"backup vim color schemes from old vimfiles
+"Plug 'flazz/vim-colorschemes'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -56,12 +59,14 @@ call plug#end()
 "tell the term has 256 colors
 set t_Co=256
 
-"use Solarized colourscheme
+"use Atom's OneDark colourscheme
 set background=dark
-let g:solarized_termcolors=256
-colorscheme solarized
-let g:AirlineTheme='solarized'
-let g:airline_solarized_bg='dark'
+let g:onedark_termcolors = 256
+let g:AirlineTheme='onedark'
+colorscheme onedark
+
+"backup colourscheme from old vimfiles
+"colorscheme zephyr
 
 "show incomplete cmds down the bottom
 set showcmd
