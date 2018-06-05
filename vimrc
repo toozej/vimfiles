@@ -115,6 +115,7 @@ set guifont=Ubuntu\ Mono\ 12
 set backspace=indent,eol,start
 set textwidth=0
 "default indent settings
+set expandtab
 set shiftwidth=4
 set tabstop=4
 set autoindent
@@ -166,7 +167,7 @@ set wildignore=*.o,*.obj,*~
 "yank to end of line (not including \n)
 nnoremap Y y$
 "auto-reindent
-nnoremap <F10> mzgg=G`z
+nnoremap <F10> :%retab<CR>
 "scroll sync toggle
 nnoremap <F11> scb!
 "paste mode
