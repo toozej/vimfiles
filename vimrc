@@ -195,6 +195,8 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$']
 " NERDTree Minimal UI
 let NERDTreeMinimalUI=1
+" disable auto-collapsing dirs that have only one child
+let NERDTreeCascadeSingleChildDir=0
 
 " ctrlp
 " ignore files in .gitignore
