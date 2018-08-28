@@ -8,7 +8,9 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh '''ln -s ~/.vim/vimrc ~/.vimrc; 
+        sh '''mkdir .vim
+mv ~/* .vim/ 
+ln -s ~/.vim/vimrc ~/.vimrc; 
 vim +PlugInstall +qall;'''
       }
     }
