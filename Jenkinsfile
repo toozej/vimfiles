@@ -9,8 +9,8 @@ pipeline {
     stage('Install') {
       steps {
         sh '''mkdir .vim
-mv ~/* .vim/ 
-ln -s ~/.vim/vimrc ~/.vimrc; 
+mv vimrc autoload README.md .gitignore .git Jenkinsfile .vim/ 
+ln -s .vim/vimrc ~/.vimrc; 
 vim +PlugInstall +qall;'''
       }
     }
