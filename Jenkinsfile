@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'jare/alpine-vim'
+      image 'rmohta/alpine-vim8'
     }
 
   }
