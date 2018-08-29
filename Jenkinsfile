@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh '''mkdir /root/.vim/;
+        sh '''rm -rf /root/.vim/ /root/.vimrc;
+mkdir /root/.vim/;
 mv vimrc autoload /root/.vim/;
 ln -s .vim/vimrc ~/.vimrc; 
 vim +\'PlugInstall --sync\' +qa;'''
