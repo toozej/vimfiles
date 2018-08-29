@@ -1,7 +1,7 @@
 pipeline {
   agent {
     docker {
-      image 'rmohta/alpine-vim8'
+      image 'rmohta/alpine-vim8:base'
     }
 
   }
