@@ -8,7 +8,8 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh '''rm -rf /root/.vim/ /root/.vimrc;
+        sh '''apk update && apk install git
+rm -rf /root/.vim/ /root/.vimrc;
 mkdir /root/.vim/;
 mv vimrc autoload /root/.vim/;
 ln -s .vim/vimrc ~/.vimrc; 
