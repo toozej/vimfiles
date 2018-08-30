@@ -62,8 +62,8 @@ set t_Co=256
 let g:onedark_termcolors = 256
 let g:AirlineTheme='onedark'
 "use the ron colorscheme if onedark is unavailable
-!silent colorscheme ron
-!silent colorscheme onedark
+silent! colorscheme ron
+silent! colorscheme onedark
 
 "show incomplete cmds down the bottom
 set showcmd
