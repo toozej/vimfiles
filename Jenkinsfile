@@ -8,12 +8,12 @@ pipeline {
   stages {
     stage('Install') {
       steps {
-        sh '''apk update && apk add git
+        sh '''apk update && apk add git;
 rm -rf /root/.vim/ /root/.vimrc;
 mkdir /root/.vim/;
 mv vimrc autoload /root/.vim/;
 ln -s .vim/vimrc ~/.vimrc; 
-vim +\'colorscheme ron PlugInstall --sync\' +qa;'''
+vim +\'PlugInstall --sync\' +qa;'''
       }
     }
   }
