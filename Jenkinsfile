@@ -12,7 +12,7 @@ pipeline {
 mkdir /root/.vim/;
 mv vimrc autoload /root/.vim/;
 ln -s .vim/vimrc ~/.vimrc; 
-vim +\'PlugInstall --sync\' +qa;'''
+vim +\'colorscheme ron PlugInstall --sync\' +qa;'''
       }
     }
   }
