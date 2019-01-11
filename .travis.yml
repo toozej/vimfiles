@@ -9,6 +9,6 @@ script:
   - docker run --rm -it -v ${PWD}/:/root/ rmohta/alpine-vim8:base /bin/sh -c "apk update && apk add git;
       rm -rf /root/.vim/ /root/.vimrc;
       mkdir /root/.vim/;
-      mv vimrc autoload /root/.vim/;
-      ln -s .vim/vimrc ~/.vimrc;
-      vim +\'PlugInstall --sync\' +qa;"
+      mv /root/vimrc /root/autoload /root/.vim/;
+      ln -s /root/.vim/vimrc ~/.vimrc;
+      vim +'PlugInstall --sync' +qa;"
