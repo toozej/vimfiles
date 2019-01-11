@@ -64,9 +64,9 @@ set t_Co=256
 "use Atom's OneDark colourscheme
 let g:onedark_termcolors = 256
 let g:AirlineTheme='onedark'
-colorscheme onedark
-"backup colourscheme from old vimfiles
-"colorscheme zephyr
+"use the ron colorscheme if onedark is unavailable
+silent! colorscheme ron
+silent! colorscheme onedark
 
 "show incomplete cmds down the bottom
 set showcmd
