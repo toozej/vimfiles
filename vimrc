@@ -21,7 +21,7 @@ Plug 'tpope/vim-fugitive'
 " Vim Polyglot - language support
 Plug 'sheerun/vim-polyglot'
 
-" Hashivim Terraform
+" Terraform
 Plug 'hashivim/vim-terraform'
 
 " Salt
@@ -51,6 +51,9 @@ Plug 'nathanaelkane/vim-indent-guides'
 
 " Ctrl-P Atom-like fuzzy file search
 Plug 'ctrlpvim/ctrlp.vim'
+
+" Asynchronous task dispatcher
+Plug 'tpope/vim-dispatch'
 
 call plug#end()
 
@@ -228,6 +231,12 @@ augroup vagrant
     au BufRead,BufNewFile Vagrantfile set filetype=ruby
 augroup END
 
+" compile LaTeX as PDF on save
+augroup latex
+    autocmd!
+    autocmd BufEnter *.tex let b:dispatch='pdflatex %'
+    autocmd BufWrite * Dispatch!
+augroup end
 
 
 "tmp
