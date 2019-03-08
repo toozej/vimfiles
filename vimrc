@@ -235,7 +235,7 @@ augroup END
 augroup latex
     autocmd!
     autocmd BufEnter *.tex let b:dispatch='pdflatex %'
-    autocmd BufWrite * Dispatch!
+    autocmd BufWrite *.tex Dispatch!
 augroup end
 
 
