@@ -18,6 +18,9 @@ Plug 'airblade/vim-gitgutter'
 " Fugitive
 Plug 'tpope/vim-fugitive'
 
+" Make Fugitive use Github
+Plug 'tpope/vim-rhubarb'
+
 " Vim Polyglot - language support
 Plug 'sheerun/vim-polyglot'
 
@@ -42,7 +45,10 @@ Plug 'joshdick/onedark.vim'
 "backup vim color schemes from old vimfiles
 "Plug 'flazz/vim-colorschemes'
 
-" Airline
+" distraction-free writing
+Plug 'junegunn/goyo.vim'
+
+"Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 
