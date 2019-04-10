@@ -189,6 +189,7 @@ cmap w!! w !sudo tee >/dev/null %
 let g:ctrlp_map = '<c-t>'
 let g:ctrlp_cmd = 'CtrlP'
 "toggle NerdTree
+nnoremap <c-n> :NERDTreeToggle<CR>
 nnoremap <F9> :NERDTreeToggle<CR>
 
 
@@ -244,6 +245,18 @@ augroup latex
     autocmd BufWrite *.tex Dispatch!
 augroup end
 
+" automatically set paste when pasting in insert mode
+" https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
+let &t_SI .= "\<Esc>[?2004h"
+let &t_EI .= "\<Esc>[?2004l"
+
+inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
+
+function! XTermPasteBegin()
+  set pastetoggle=<Esc>[201~
+  set paste
+  return ""
+endfunction
 
 "tmp
 
