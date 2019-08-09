@@ -27,8 +27,8 @@ Plug 'sheerun/vim-polyglot'
 " Terraform
 Plug 'hashivim/vim-terraform'
 
-" Salt
-Plug 'saltstack/salt-vim'
+" Ansible
+Plug 'pearofducks/ansible-vim'
 
 " Jinja2
 Plug 'Glench/Vim-Jinja2-Syntax'
@@ -60,6 +60,9 @@ Plug 'ctrlpvim/ctrlp.vim'
 
 " Asynchronous task dispatcher
 Plug 'tpope/vim-dispatch'
+
+" ALE linter
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
@@ -244,6 +247,10 @@ augroup latex
     autocmd BufEnter *.tex let b:dispatch='pdflatex %'
     autocmd BufWrite *.tex Dispatch!
 augroup end
+
+" auto fix YAML via ALE
+let g:ale_fix_on_save = 1
+let g:ale_fixers = {'yaml': ['yamllint']}
 
 " automatically set paste when pasting in insert mode
 " https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
