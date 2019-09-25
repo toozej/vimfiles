@@ -48,6 +48,9 @@ Plug 'joshdick/onedark.vim'
 " distraction-free writing
 Plug 'junegunn/goyo.vim'
 
+" presentation mode
+Plug 'sotte/presenting.vim'
+
 "Airline
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
@@ -249,8 +252,8 @@ augroup latex
 augroup end
 
 " auto fix YAML via ALE
-let g:ale_fix_on_save = 1
-let g:ale_fixers = {'yaml': ['yamllint']}
+"let g:ale_fix_on_save = 1
+"let g:ale_fixers = {'yaml': ['yamllint']}
 
 " automatically set paste when pasting in insert mode
 " https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
