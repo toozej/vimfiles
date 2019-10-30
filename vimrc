@@ -233,7 +233,7 @@ function! SetCursorPosition()
 endfunction
 
 "spell check when writing commit logs
-autocmd filetype svn,*commit* setlocal spell
+autocmd FileType svn,*commit* setlocal spell
 
 "adjust tabbing for puppet yaml files
 autocmd FileType puppet,yaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
