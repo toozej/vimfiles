@@ -33,6 +33,9 @@ Plug 'pearofducks/ansible-vim'
 " Jinja2
 Plug 'Glench/Vim-Jinja2-Syntax'
 
+" Golang
+Plug 'fatih/vim-go'
+
 " The NERD tree
 Plug 'scrooloose/nerdtree'
 
