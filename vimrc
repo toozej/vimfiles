@@ -198,7 +198,7 @@ cmap w!! w !sudo tee >/dev/null %
 let g:ctrlp_map = '<c-t>'
 let g:ctrlp_cmd = 'CtrlP'
 "toggle NerdTree
-nnoremap <c-n> :NERDTreeToggle<CR>
+nnoremap <c-e> :NERDTreeToggle<CR>
 nnoremap <F9> :NERDTreeToggle<CR>
 
 
