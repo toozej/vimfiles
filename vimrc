@@ -21,6 +21,9 @@ Plug 'tpope/vim-fugitive'
 " Make Fugitive use Github
 Plug 'tpope/vim-rhubarb'
 
+" Golang
+Plug 'fatih/vim-go'
+
 " Vim Polyglot - language support
 Plug 'sheerun/vim-polyglot'
 
@@ -32,9 +35,6 @@ Plug 'pearofducks/ansible-vim'
 
 " Jinja2
 Plug 'Glench/Vim-Jinja2-Syntax'
-
-" Golang
-Plug 'fatih/vim-go'
 
 " The NERD tree
 Plug 'scrooloose/nerdtree'
@@ -252,11 +252,26 @@ augroup latex
     autocmd!
     autocmd BufEnter *.tex let b:dispatch='pdflatex %'
     autocmd BufWrite *.tex Dispatch!
-augroup end
+augroup END
+
+" validate circleci config.yml files on write
+augroup yaml_circleci
+    autocmd!
+    autocmd BufWritePost .circleci/config.yml !circleci config validate <afile>
+augroup END
+
+" turn on cursorcolumn for yaml files
+augroup yaml
+    autocmd!
+    autocmd InsertEnter *.{yaml,yml} set cursorcolumn
+    autocmd InsertLeave *.{yaml,yml} set nocursorcolumn
+augroup END
 
 " auto fix YAML via ALE
 "let g:ale_fix_on_save = 1
 "let g:ale_fixers = {'yaml': ['yamllint']}
+"let g:ale_pattern_options = {'\.tf$': {'ale_enabled': 0}}
+
 
 " automatically set paste when pasting in insert mode
 " https://coderwall.com/p/if9mda/automatically-set-paste-mode-in-vim-when-pasting-in-insert-mode
