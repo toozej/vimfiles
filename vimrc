@@ -237,6 +237,8 @@ endfunction
 
 "spell check when writing commit logs
 autocmd FileType svn,*commit* setlocal spell
+"spell check for Markdown files
+autocmd FileType markdown setlocal spell
 
 "adjust tabbing for puppet yaml files
 autocmd FileType puppet,yaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
