@@ -243,6 +243,11 @@ autocmd FileType markdown setlocal spell
 "adjust tabbing for puppet yaml files
 autocmd FileType puppet,yaml setlocal expandtab shiftwidth=2 softtabstop=2 tabstop=2
 
+"adjust tabbing for Makefiles
+"in makefiles, don't expand tabs to spaces, since actual tab characters are
+"needed, and have indentation at 4 chars to be sure that all indents are tabs
+autocmd FileType make set noexpandtab shiftwidth=4 softtabstop=0
+
 "Vagrant syntax highlighting as ruby
 augroup vagrant
     au!
