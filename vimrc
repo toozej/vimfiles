@@ -164,9 +164,9 @@ set hlsearch    "hilight searches by default
 
 " Undo Settings
 if has("win32")
-	set undodir=~/vimfiles/undofiles
+    set undodir=~/vimfiles/undofiles
 else
-	set undodir=~/.vim/undofiles
+    set undodir=~/.vim/undofiles
 endif
 
 
@@ -243,12 +243,12 @@ let g:ctrlp_user_command = ['.git', 'cd %s && git ls-files -co --exclude-standar
 "jump to last cursor position when opening a file
 autocmd BufReadPost * call SetCursorPosition()
 function! SetCursorPosition()
-	if &filetype !~ 'svn\|commit\c'
-		if line("'\"") > 0 && line("'\"") <= line("$")
-			exe "normal! g`\""
-			normal! zz
-		endif
-	end
+    if &filetype !~ 'svn\|commit\c'
+        if line("'\"") > 0 && line("'\"") <= line("$")
+            exe "normal! g`\""
+            normal! zz
+        endif
+    end
 endfunction
 
 "spell check when writing commit logs
@@ -304,9 +304,9 @@ let &t_EI .= "\<Esc>[?2004l"
 inoremap <special> <expr> <Esc>[200~ XTermPasteBegin()
 
 function! XTermPasteBegin()
-  set pastetoggle=<Esc>[201~
-  set paste
-  return ""
+    set pastetoggle=<Esc>[201~
+    set paste
+    return ""
 endfunction
 
 "tmp
