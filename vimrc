@@ -12,6 +12,9 @@ call plug#begin('~/.vim/plugged')
 " Auto Pairs
 Plug 'jiangmiao/auto-pairs'
 
+" Surround
+Plug 'tpope/vim-surround'
+
 " GitGutter
 Plug 'airblade/vim-gitgutter'
 
