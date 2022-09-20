@@ -233,6 +233,9 @@ let NERDTreeShowHidden=1
 let NERDTreeIgnore = ['\.pyc$']
 " NERDTree Minimal UI
 let NERDTreeMinimalUI=1
+" NERDTree Minimal Menu until github.com/preservim/nerdtree/issues/1321 is
+" resolved
+let NERDTreeMinimalMenu=1
 " disable auto-collapsing dirs that have only one child
 let NERDTreeCascadeSingleChildDir=0
 
