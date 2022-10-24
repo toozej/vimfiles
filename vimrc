@@ -315,6 +315,11 @@ function! XTermPasteBegin()
     return ""
 endfunction
 
+" format and unformat JSON
+command JSONfmt :%!jq .
+command JSONunfmt :%!jq -c .
+
+
 "tmp
 
 set formatoptions-=o "dont continue comments when pushing o/O
