@@ -53,6 +53,7 @@ Plug 'rakr/vim-one'
 
 " distraction-free writing
 Plug 'junegunn/goyo.vim'
+Plug 'junegunn/limelight.vim'
 
 " presentation mode
 Plug 'sotte/presenting.vim'
@@ -140,7 +141,34 @@ syntax on
 "hide buffers when not displayed
 set hidden
 
+"enable Limelight and other settings
+"when using Goyo for distraction-free writing
+function! s:goyo_enter()
+    if executable('tmux') && strlen($TMUX)
+        silent !tmux set status off
+        silent !tmux list-panes -F '\#F' | grep -q Z || tmux resize-pane -Z
+    endif
+    set noshowmode
+    set noshowcmd
+    set laststatus=0
+    set scrolloff=999
+    set shortmess=F
+    Limelight
+endfunction
 
+function! s:goyo_leave()
+    if executable('tmux') && strlen($TMUX)
+        silent !tmux set status on
+        silent !tmux list-panes -F '\#F' | grep -q Z && tmux resize-pane -Z
+    endif
+    set showmode
+    set showcmd
+    set scrolloff=5
+    Limelight!
+endfunction
+
+autocmd! User GoyoEnter nested call <SID>goyo_enter()
+autocmd! User GoyoLeave nested call <SID>goyo_leave()
 
 " Font Settings
 set guifont=Ubuntu\ Mono\ 12
