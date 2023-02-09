@@ -40,7 +40,7 @@ Plug 'pearofducks/ansible-vim'
 Plug 'Glench/Vim-Jinja2-Syntax'
 
 " The NERD tree
-Plug 'scrooloose/nerdtree'
+Plug 'preservim/nerdtree'
 
 " NERD tree Git plugin
 Plug 'Xuyuanp/nerdtree-git-plugin'
