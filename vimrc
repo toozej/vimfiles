@@ -214,7 +214,6 @@ let g:go_fmt_autosave=1
 " System + OS Settings
 "mouse work in terminal
 set mouse=a
-set ttymouse=xterm2
 "setup clipboard for Mac OS
 set clipboard=unnamed
 "disable swapfile
